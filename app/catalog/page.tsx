@@ -35,11 +35,11 @@ export default function CatalogPage() {
       {/* Header */}
       <Header activeRoute="catalog" />
 
-      <section className="mx-auto max-w-6xl px-6 py-10">
+      <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
 
         {/* Judul Halaman */}
         <div className="mb-8">
-          <p className="mb-2 text-sm font-semibold text-indigo-600">
+          <p className="mb-2 text-sm font-semibold text-indigo-700">
             TEMUPUSTAKA
           </p>
 
@@ -47,13 +47,13 @@ export default function CatalogPage() {
             Temukan Koleksi Pilihanmu
           </h1>
 
-          <p className="mt-2 text-gray-500">
+          <p className="mt-2 text-gray-700">
             Jelajahi berbagai sumber referensi sesuai kebutuhanmu.
           </p>
         </div>
 
         {/* Tombol Aksi */}
-        <div className="mb-8 flex gap-3">
+        <div className="mb-8 flex flex-wrap gap-3">
           <Button
             label="Jelajahi Koleksi"
             variant="primary"
@@ -66,11 +66,12 @@ export default function CatalogPage() {
         </div>
 
         {/* Daftar Koleksi */}
-        <h2 className="mb-5 text-xl font-bold text-gray-800">
+        <h2 className="mb-5 text-xl font-bold text-gray-900">
           Rekomendasi Koleksi
         </h2>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Grid Responsif Tailwind CSS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
           {catalogData.map((book) => (
             <BookCard
